@@ -1,3 +1,5 @@
+using AjedrezVisual.Properties;
+
 namespace AjedrezVisual
 {
     public partial class Form1 : Form
@@ -7,16 +9,36 @@ namespace AjedrezVisual
         public Form1()
         {
             InitializeComponent();
+            CrearTablero();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            foreach (PictureBox picture in panel1.Controls.OfType<PictureBox>().Reverse<PictureBox>())
+            {
+                switch (picture.Name)
+                {
+                    case "pictureBox1":
+                        picture.Image = Resource1.Black_Rook;
+                        break;
+                    default:
+                        picture.Image = null;
+                        break;
+                }
+            }
+
+
+        }
+
+        public void CrearTablero()
+        {
             int i = 0;
             int j = 0;
-            foreach (Control control in panel1.Controls.OfType<PictureBox>())
+
+            foreach (PictureBox picture in panel1.Controls.OfType<PictureBox>().Reverse<PictureBox>())
             {
-                PictureBox pictureBox = (PictureBox)control;
-                tablero[i, j] = pictureBox.Name + " " + pictureBox.Location.X.ToString() + "," + pictureBox.Location.Y.ToString();
+                tablero[i, j] = picture.Name + " " + picture.Location.X.ToString() + "," + picture.Location.Y.ToString();
 
                 // Incrementa los índices
                 j++;
