@@ -1,4 +1,5 @@
 using AjedrezVisual.Properties;
+using System.Windows.Forms;
 
 namespace AjedrezVisual
 {
@@ -47,5 +48,38 @@ namespace AjedrezVisual
             //    }
             //}
         }
+        
+        private void SeleccionaPieza(object sender, EventArgs e)
+        {
+            //MessageBox.Show(sender.ToString());
+            //MessageBox.Show(sender.GetType().Name.ToString());
+            //Point position = GetPictureBoxPosition(sender.GetType().Name);
+            Point position = GetPictureBoxPosition(sender);
+            MessageBox.Show(position.ToString());
+            //foreach (PictureBox picture in panel1.Controls.OfType<PictureBox>().Reverse<PictureBox>())
+            //{
+            //    Point position = GetPictureBoxPosition(picture);
+            //    MessageBox.Show(position.ToString());
+            //    break;
+            //}
+        }
+
+
+        private Point GetPictureBoxPosition(object sender)
+        {
+            // Obtiene la posición relativa al contenedor principal
+            //Point position = pictureBox.Location;
+            Point point = sender.GetType().Name.ToLower() == "picturebox" ? ((PictureBox)sender).Location : new Point();
+
+            // Ajusta la posición si está dentro de un ScrollControl
+            //if (pictureBox.Parent is ScrollControl scrollControl)
+            //{
+            //    position = scrollControl.GetOffset(position);
+            //}
+
+            return point;
+        }
+
+
     }
 }
