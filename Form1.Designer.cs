@@ -283,6 +283,7 @@
             pictureBox64.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox64.TabIndex = 127;
             pictureBox64.TabStop = false;
+            pictureBox64.Click += SeleccionaPieza;
             // 
             // pictureBox63
             // 
@@ -295,6 +296,7 @@
             pictureBox63.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox63.TabIndex = 126;
             pictureBox63.TabStop = false;
+            pictureBox63.Click += SeleccionaPieza;
             // 
             // pictureBox62
             // 
@@ -307,6 +309,7 @@
             pictureBox62.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox62.TabIndex = 125;
             pictureBox62.TabStop = false;
+            pictureBox62.Click += SeleccionaPieza;
             // 
             // pictureBox61
             // 
@@ -319,6 +322,7 @@
             pictureBox61.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox61.TabIndex = 124;
             pictureBox61.TabStop = false;
+            pictureBox61.Click += SeleccionaPieza;
             // 
             // pictureBox60
             // 
@@ -331,6 +335,7 @@
             pictureBox60.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox60.TabIndex = 123;
             pictureBox60.TabStop = false;
+            pictureBox60.Click += SeleccionaPieza;
             // 
             // pictureBox59
             // 
@@ -343,6 +348,7 @@
             pictureBox59.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox59.TabIndex = 122;
             pictureBox59.TabStop = false;
+            pictureBox59.Click += SeleccionaPieza;
             // 
             // pictureBox58
             // 
@@ -355,6 +361,7 @@
             pictureBox58.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox58.TabIndex = 121;
             pictureBox58.TabStop = false;
+            pictureBox58.Click += SeleccionaPieza;
             // 
             // pictureBox57
             // 
@@ -367,6 +374,7 @@
             pictureBox57.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox57.TabIndex = 120;
             pictureBox57.TabStop = false;
+            pictureBox57.Click += SeleccionaPieza;
             // 
             // pictureBox56
             // 
@@ -379,6 +387,7 @@
             pictureBox56.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox56.TabIndex = 119;
             pictureBox56.TabStop = false;
+            pictureBox56.Click += SeleccionaPieza;
             // 
             // pictureBox55
             // 
@@ -391,6 +400,7 @@
             pictureBox55.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox55.TabIndex = 118;
             pictureBox55.TabStop = false;
+            pictureBox55.Click += SeleccionaPieza;
             // 
             // pictureBox54
             // 
@@ -403,6 +413,7 @@
             pictureBox54.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox54.TabIndex = 117;
             pictureBox54.TabStop = false;
+            pictureBox54.Click += SeleccionaPieza;
             // 
             // pictureBox53
             // 
@@ -415,6 +426,7 @@
             pictureBox53.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox53.TabIndex = 116;
             pictureBox53.TabStop = false;
+            pictureBox53.Click += SeleccionaPieza;
             // 
             // pictureBox52
             // 
@@ -427,6 +439,7 @@
             pictureBox52.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox52.TabIndex = 115;
             pictureBox52.TabStop = false;
+            pictureBox52.Click += SeleccionaPieza;
             // 
             // pictureBox51
             // 
@@ -439,6 +452,7 @@
             pictureBox51.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox51.TabIndex = 114;
             pictureBox51.TabStop = false;
+            pictureBox51.Click += SeleccionaPieza;
             // 
             // pictureBox50
             // 
@@ -451,6 +465,7 @@
             pictureBox50.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox50.TabIndex = 113;
             pictureBox50.TabStop = false;
+            pictureBox50.Click += SeleccionaPieza;
             // 
             // pictureBox49
             // 
@@ -463,6 +478,7 @@
             pictureBox49.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox49.TabIndex = 112;
             pictureBox49.TabStop = false;
+            pictureBox49.Click += SeleccionaPieza;
             // 
             // pictureBox48
             // 
@@ -474,6 +490,7 @@
             pictureBox48.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox48.TabIndex = 111;
             pictureBox48.TabStop = false;
+            pictureBox48.Click += SeleccionaPieza;
             // 
             // pictureBox47
             // 
@@ -485,6 +502,7 @@
             pictureBox47.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox47.TabIndex = 110;
             pictureBox47.TabStop = false;
+            pictureBox47.Click += SeleccionaPieza;
             // 
             // pictureBox46
             // 
@@ -496,6 +514,7 @@
             pictureBox46.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox46.TabIndex = 109;
             pictureBox46.TabStop = false;
+            pictureBox46.Click += SeleccionaPieza;
             // 
             // pictureBox45
             // 
@@ -507,6 +526,7 @@
             pictureBox45.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox45.TabIndex = 108;
             pictureBox45.TabStop = false;
+            pictureBox45.Click += SeleccionaPieza;
             // 
             // pictureBox44
             // 
@@ -518,6 +538,7 @@
             pictureBox44.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox44.TabIndex = 107;
             pictureBox44.TabStop = false;
+            pictureBox44.Click += SeleccionaPieza;
             // 
             // pictureBox43
             // 
@@ -529,6 +550,7 @@
             pictureBox43.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox43.TabIndex = 106;
             pictureBox43.TabStop = false;
+            pictureBox43.Click += SeleccionaPieza;
             // 
             // pictureBox42
             // 
@@ -540,6 +562,7 @@
             pictureBox42.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox42.TabIndex = 105;
             pictureBox42.TabStop = false;
+            pictureBox42.Click += SeleccionaPieza;
             // 
             // pictureBox41
             // 
@@ -551,6 +574,7 @@
             pictureBox41.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox41.TabIndex = 104;
             pictureBox41.TabStop = false;
+            pictureBox41.Click += SeleccionaPieza;
             // 
             // pictureBox40
             // 
@@ -562,6 +586,7 @@
             pictureBox40.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox40.TabIndex = 103;
             pictureBox40.TabStop = false;
+            pictureBox40.Click += SeleccionaPieza;
             // 
             // pictureBox39
             // 
@@ -573,6 +598,7 @@
             pictureBox39.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox39.TabIndex = 102;
             pictureBox39.TabStop = false;
+            pictureBox39.Click += SeleccionaPieza;
             // 
             // pictureBox38
             // 
@@ -584,6 +610,7 @@
             pictureBox38.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox38.TabIndex = 101;
             pictureBox38.TabStop = false;
+            pictureBox38.Click += SeleccionaPieza;
             // 
             // pictureBox37
             // 
@@ -595,6 +622,7 @@
             pictureBox37.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox37.TabIndex = 100;
             pictureBox37.TabStop = false;
+            pictureBox37.Click += SeleccionaPieza;
             // 
             // pictureBox36
             // 
@@ -606,6 +634,7 @@
             pictureBox36.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox36.TabIndex = 99;
             pictureBox36.TabStop = false;
+            pictureBox36.Click += SeleccionaPieza;
             // 
             // pictureBox35
             // 
@@ -617,6 +646,7 @@
             pictureBox35.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox35.TabIndex = 98;
             pictureBox35.TabStop = false;
+            pictureBox35.Click += SeleccionaPieza;
             // 
             // pictureBox34
             // 
@@ -628,6 +658,7 @@
             pictureBox34.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox34.TabIndex = 97;
             pictureBox34.TabStop = false;
+            pictureBox34.Click += SeleccionaPieza;
             // 
             // pictureBox33
             // 
@@ -639,6 +670,7 @@
             pictureBox33.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox33.TabIndex = 96;
             pictureBox33.TabStop = false;
+            pictureBox33.Click += SeleccionaPieza;
             // 
             // pictureBox32
             // 
@@ -650,6 +682,7 @@
             pictureBox32.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox32.TabIndex = 95;
             pictureBox32.TabStop = false;
+            pictureBox32.Click += SeleccionaPieza;
             // 
             // pictureBox31
             // 
@@ -661,6 +694,7 @@
             pictureBox31.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox31.TabIndex = 94;
             pictureBox31.TabStop = false;
+            pictureBox31.Click += SeleccionaPieza;
             // 
             // pictureBox30
             // 
@@ -672,6 +706,7 @@
             pictureBox30.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox30.TabIndex = 93;
             pictureBox30.TabStop = false;
+            pictureBox30.Click += SeleccionaPieza;
             // 
             // pictureBox29
             // 
@@ -683,6 +718,7 @@
             pictureBox29.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox29.TabIndex = 92;
             pictureBox29.TabStop = false;
+            pictureBox29.Click += SeleccionaPieza;
             // 
             // pictureBox28
             // 
@@ -694,6 +730,7 @@
             pictureBox28.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox28.TabIndex = 91;
             pictureBox28.TabStop = false;
+            pictureBox28.Click += SeleccionaPieza;
             // 
             // pictureBox27
             // 
@@ -705,6 +742,7 @@
             pictureBox27.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox27.TabIndex = 90;
             pictureBox27.TabStop = false;
+            pictureBox27.Click += SeleccionaPieza;
             // 
             // pictureBox26
             // 
@@ -716,6 +754,7 @@
             pictureBox26.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox26.TabIndex = 89;
             pictureBox26.TabStop = false;
+            pictureBox26.Click += SeleccionaPieza;
             // 
             // pictureBox25
             // 
@@ -727,6 +766,7 @@
             pictureBox25.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox25.TabIndex = 88;
             pictureBox25.TabStop = false;
+            pictureBox25.Click += SeleccionaPieza;
             // 
             // pictureBox24
             // 
@@ -738,6 +778,7 @@
             pictureBox24.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox24.TabIndex = 87;
             pictureBox24.TabStop = false;
+            pictureBox24.Click += SeleccionaPieza;
             // 
             // pictureBox23
             // 
@@ -749,6 +790,7 @@
             pictureBox23.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox23.TabIndex = 86;
             pictureBox23.TabStop = false;
+            pictureBox23.Click += SeleccionaPieza;
             // 
             // pictureBox22
             // 
@@ -760,6 +802,7 @@
             pictureBox22.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox22.TabIndex = 85;
             pictureBox22.TabStop = false;
+            pictureBox22.Click += SeleccionaPieza;
             // 
             // pictureBox21
             // 
@@ -771,6 +814,7 @@
             pictureBox21.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox21.TabIndex = 84;
             pictureBox21.TabStop = false;
+            pictureBox21.Click += SeleccionaPieza;
             // 
             // pictureBox20
             // 
@@ -782,6 +826,7 @@
             pictureBox20.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox20.TabIndex = 83;
             pictureBox20.TabStop = false;
+            pictureBox20.Click += SeleccionaPieza;
             // 
             // pictureBox19
             // 
@@ -793,6 +838,7 @@
             pictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox19.TabIndex = 82;
             pictureBox19.TabStop = false;
+            pictureBox19.Click += SeleccionaPieza;
             // 
             // pictureBox18
             // 
@@ -804,6 +850,7 @@
             pictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox18.TabIndex = 81;
             pictureBox18.TabStop = false;
+            pictureBox18.Click += SeleccionaPieza;
             // 
             // pictureBox17
             // 
@@ -815,6 +862,7 @@
             pictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox17.TabIndex = 80;
             pictureBox17.TabStop = false;
+            pictureBox17.Click += SeleccionaPieza;
             // 
             // pictureBox16
             // 
@@ -827,6 +875,7 @@
             pictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox16.TabIndex = 79;
             pictureBox16.TabStop = false;
+            pictureBox16.Click += SeleccionaPieza;
             // 
             // pictureBox15
             // 
@@ -839,6 +888,7 @@
             pictureBox15.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox15.TabIndex = 78;
             pictureBox15.TabStop = false;
+            pictureBox15.Click += SeleccionaPieza;
             // 
             // pictureBox14
             // 
@@ -851,6 +901,7 @@
             pictureBox14.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox14.TabIndex = 77;
             pictureBox14.TabStop = false;
+            pictureBox14.Click += SeleccionaPieza;
             // 
             // pictureBox13
             // 
@@ -863,6 +914,7 @@
             pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox13.TabIndex = 76;
             pictureBox13.TabStop = false;
+            pictureBox13.Click += SeleccionaPieza;
             // 
             // pictureBox12
             // 
@@ -875,6 +927,7 @@
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox12.TabIndex = 75;
             pictureBox12.TabStop = false;
+            pictureBox12.Click += SeleccionaPieza;
             // 
             // pictureBox11
             // 
@@ -887,6 +940,7 @@
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 74;
             pictureBox11.TabStop = false;
+            pictureBox11.Click += SeleccionaPieza;
             // 
             // pictureBox10
             // 
@@ -925,6 +979,7 @@
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 15;
             pictureBox8.TabStop = false;
+            pictureBox8.Click += SeleccionaPieza;
             // 
             // pictureBox7
             // 
@@ -937,6 +992,7 @@
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 14;
             pictureBox7.TabStop = false;
+            pictureBox7.Click += SeleccionaPieza;
             // 
             // pictureBox6
             // 
@@ -949,6 +1005,7 @@
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 13;
             pictureBox6.TabStop = false;
+            pictureBox6.Click += SeleccionaPieza;
             // 
             // pictureBox5
             // 
@@ -961,6 +1018,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 12;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += SeleccionaPieza;
             // 
             // pictureBox4
             // 
@@ -973,6 +1031,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 11;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += SeleccionaPieza;
             // 
             // pictureBox3
             // 
@@ -985,6 +1044,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 10;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += SeleccionaPieza;
             // 
             // pictureBox2
             // 
@@ -997,6 +1057,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 9;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += SeleccionaPieza;
             // 
             // Form1
             // 
