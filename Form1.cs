@@ -55,6 +55,10 @@ namespace AjedrezVisual
         private void SeleccionaPieza(object sender, EventArgs e)
         {
             // Obtiene la posición de un control PictureBox
+
+            
+
+
             Point position = GetPictureBoxPosition(sender);
             if (sender is PictureBox pictureBox)
             {
@@ -62,7 +66,12 @@ namespace AjedrezVisual
                 if (pictureBox.Image != null)
                 {
                     string fileName = pictureBox.Tag.ToString();
-                    MessageBox.Show("Filename: " + fileName);
+                    //MessageBox.Show("Filename: " + fileName);
+                    pbPieza.Image = pictureBox.Image;
+                    pbPieza.Tag = pictureBox.Tag;
+
+
+
                     if (fileName.Contains("White"))
                     {
                         MessageBox.Show("Pieza blanca");
@@ -89,11 +98,37 @@ namespace AjedrezVisual
             return point;
         }
 
+        private bool MoverPieza(object sender, EventArgs e)
+        {
+            if(seleccion == 1)
+            {
+                // Obtiene la posición de un control PictureBox
+                Point position = GetPictureBoxPosition(sender);
+                sender.GetType().GetProperty("Image").SetValue(sender, pbPieza.Image);
+                sender.GetType().GetProperty("Tag").SetValue(sender, pbPieza.Tag);
+                //pbPieza.Location = position;
+                seleccion = 0;
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una pieza a mover.");
+                return false;
+            }
+        }
+
         private void CasillaDestino(object sender, EventArgs e)
         {
-            // Obtiene la posición de un control PictureBox
-            Point position = GetPictureBoxPosition(sender);
-            MessageBox.Show("Posición final "+position.ToString());
+            if(MoverPieza(sender, e))
+            {
+                // Obtiene la posición de un control PictureBox
+                pbPieza.Image = null;
+                pbPieza.Tag = null;
+            }
+
+            //// Obtiene la posición de un control PictureBox
+            //Point position = GetPictureBoxPosition(sender);
+            //MessageBox.Show("Posición final "+position.ToString());
         }
     }
 }

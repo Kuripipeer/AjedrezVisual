@@ -96,6 +96,7 @@
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
+            pbPieza = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox64).BeginInit();
@@ -161,13 +162,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbPieza).BeginInit();
             SuspendLayout();
             // 
             // pepe
             // 
-            pepe.Location = new Point(870, 69);
+            pepe.Location = new Point(761, 52);
+            pepe.Margin = new Padding(3, 2, 3, 2);
             pepe.Name = "pepe";
-            pepe.Size = new Size(94, 29);
+            pepe.Size = new Size(82, 22);
             pepe.TabIndex = 0;
             pepe.Text = "button1";
             pepe.UseVisualStyleBackColor = true;
@@ -175,9 +178,10 @@
             // 
             // button4
             // 
-            button4.Location = new Point(882, 295);
+            button4.Location = new Point(772, 221);
+            button4.Margin = new Padding(3, 2, 3, 2);
             button4.Name = "button4";
-            button4.Size = new Size(94, 29);
+            button4.Size = new Size(82, 22);
             button4.TabIndex = 3;
             button4.Text = "button4";
             button4.UseVisualStyleBackColor = true;
@@ -187,9 +191,10 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Resource1.White_Rook;
-            pictureBox1.Location = new Point(78, 667);
+            pictureBox1.Location = new Point(68, 500);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(85, 84);
+            pictureBox1.Size = new Size(74, 63);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
@@ -265,18 +270,20 @@
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(-15, -13);
+            panel1.Location = new Point(-13, -10);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(827, 828);
+            panel1.Size = new Size(724, 621);
             panel1.TabIndex = 16;
             // 
             // pictureBox64
             // 
             pictureBox64.BackColor = Color.Transparent;
             pictureBox64.Image = Resource1.Black_Rook;
-            pictureBox64.Location = new Point(667, 76);
+            pictureBox64.Location = new Point(584, 57);
+            pictureBox64.Margin = new Padding(3, 2, 3, 2);
             pictureBox64.Name = "pictureBox64";
-            pictureBox64.Size = new Size(85, 84);
+            pictureBox64.Size = new Size(74, 63);
             pictureBox64.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox64.TabIndex = 127;
             pictureBox64.TabStop = false;
@@ -288,9 +295,10 @@
             // 
             pictureBox63.BackColor = Color.Transparent;
             pictureBox63.Image = Resource1.Black_Knight;
-            pictureBox63.Location = new Point(584, 77);
+            pictureBox63.Location = new Point(511, 58);
+            pictureBox63.Margin = new Padding(3, 2, 3, 2);
             pictureBox63.Name = "pictureBox63";
-            pictureBox63.Size = new Size(85, 84);
+            pictureBox63.Size = new Size(74, 63);
             pictureBox63.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox63.TabIndex = 126;
             pictureBox63.TabStop = false;
@@ -302,9 +310,10 @@
             // 
             pictureBox62.BackColor = Color.Transparent;
             pictureBox62.Image = Resource1.Black_Bishop;
-            pictureBox62.Location = new Point(501, 76);
+            pictureBox62.Location = new Point(438, 57);
+            pictureBox62.Margin = new Padding(3, 2, 3, 2);
             pictureBox62.Name = "pictureBox62";
-            pictureBox62.Size = new Size(85, 84);
+            pictureBox62.Size = new Size(74, 63);
             pictureBox62.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox62.TabIndex = 125;
             pictureBox62.TabStop = false;
@@ -316,9 +325,10 @@
             // 
             pictureBox61.BackColor = Color.Transparent;
             pictureBox61.Image = Resource1.Black_Queen;
-            pictureBox61.Location = new Point(414, 77);
+            pictureBox61.Location = new Point(362, 58);
+            pictureBox61.Margin = new Padding(3, 2, 3, 2);
             pictureBox61.Name = "pictureBox61";
-            pictureBox61.Size = new Size(85, 84);
+            pictureBox61.Size = new Size(74, 63);
             pictureBox61.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox61.TabIndex = 124;
             pictureBox61.TabStop = false;
@@ -330,9 +340,10 @@
             // 
             pictureBox60.BackColor = Color.Transparent;
             pictureBox60.Image = Resource1.Black_King;
-            pictureBox60.Location = new Point(331, 77);
+            pictureBox60.Location = new Point(290, 58);
+            pictureBox60.Margin = new Padding(3, 2, 3, 2);
             pictureBox60.Name = "pictureBox60";
-            pictureBox60.Size = new Size(85, 84);
+            pictureBox60.Size = new Size(74, 63);
             pictureBox60.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox60.TabIndex = 123;
             pictureBox60.TabStop = false;
@@ -344,9 +355,10 @@
             // 
             pictureBox59.BackColor = Color.Transparent;
             pictureBox59.Image = Resource1.Black_Bishop;
-            pictureBox59.Location = new Point(245, 77);
+            pictureBox59.Location = new Point(214, 58);
+            pictureBox59.Margin = new Padding(3, 2, 3, 2);
             pictureBox59.Name = "pictureBox59";
-            pictureBox59.Size = new Size(85, 84);
+            pictureBox59.Size = new Size(74, 63);
             pictureBox59.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox59.TabIndex = 122;
             pictureBox59.TabStop = false;
@@ -358,9 +370,10 @@
             // 
             pictureBox58.BackColor = Color.Transparent;
             pictureBox58.Image = Resource1.Black_Knight;
-            pictureBox58.Location = new Point(161, 77);
+            pictureBox58.Location = new Point(141, 58);
+            pictureBox58.Margin = new Padding(3, 2, 3, 2);
             pictureBox58.Name = "pictureBox58";
-            pictureBox58.Size = new Size(85, 84);
+            pictureBox58.Size = new Size(74, 63);
             pictureBox58.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox58.TabIndex = 121;
             pictureBox58.TabStop = false;
@@ -372,9 +385,10 @@
             // 
             pictureBox57.BackColor = Color.Transparent;
             pictureBox57.Image = Resource1.Black_Rook;
-            pictureBox57.Location = new Point(78, 77);
+            pictureBox57.Location = new Point(68, 58);
+            pictureBox57.Margin = new Padding(3, 2, 3, 2);
             pictureBox57.Name = "pictureBox57";
-            pictureBox57.Size = new Size(85, 84);
+            pictureBox57.Size = new Size(74, 63);
             pictureBox57.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox57.TabIndex = 120;
             pictureBox57.TabStop = false;
@@ -386,9 +400,10 @@
             // 
             pictureBox56.BackColor = Color.Transparent;
             pictureBox56.Image = Resource1.Black_Pawn;
-            pictureBox56.Location = new Point(669, 160);
+            pictureBox56.Location = new Point(585, 120);
+            pictureBox56.Margin = new Padding(3, 2, 3, 2);
             pictureBox56.Name = "pictureBox56";
-            pictureBox56.Size = new Size(85, 84);
+            pictureBox56.Size = new Size(74, 63);
             pictureBox56.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox56.TabIndex = 119;
             pictureBox56.TabStop = false;
@@ -400,9 +415,10 @@
             // 
             pictureBox55.BackColor = Color.Transparent;
             pictureBox55.Image = Resource1.Black_Pawn;
-            pictureBox55.Location = new Point(583, 163);
+            pictureBox55.Location = new Point(510, 122);
+            pictureBox55.Margin = new Padding(3, 2, 3, 2);
             pictureBox55.Name = "pictureBox55";
-            pictureBox55.Size = new Size(85, 84);
+            pictureBox55.Size = new Size(74, 63);
             pictureBox55.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox55.TabIndex = 118;
             pictureBox55.TabStop = false;
@@ -414,9 +430,10 @@
             // 
             pictureBox54.BackColor = Color.Transparent;
             pictureBox54.Image = Resource1.Black_Pawn;
-            pictureBox54.Location = new Point(499, 161);
+            pictureBox54.Location = new Point(437, 121);
+            pictureBox54.Margin = new Padding(3, 2, 3, 2);
             pictureBox54.Name = "pictureBox54";
-            pictureBox54.Size = new Size(85, 84);
+            pictureBox54.Size = new Size(74, 63);
             pictureBox54.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox54.TabIndex = 117;
             pictureBox54.TabStop = false;
@@ -428,9 +445,10 @@
             // 
             pictureBox53.BackColor = Color.Transparent;
             pictureBox53.Image = Resource1.Black_Pawn;
-            pictureBox53.Location = new Point(415, 163);
+            pictureBox53.Location = new Point(363, 122);
+            pictureBox53.Margin = new Padding(3, 2, 3, 2);
             pictureBox53.Name = "pictureBox53";
-            pictureBox53.Size = new Size(85, 84);
+            pictureBox53.Size = new Size(74, 63);
             pictureBox53.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox53.TabIndex = 116;
             pictureBox53.TabStop = false;
@@ -442,9 +460,10 @@
             // 
             pictureBox52.BackColor = Color.Transparent;
             pictureBox52.Image = Resource1.Black_Pawn;
-            pictureBox52.Location = new Point(331, 163);
+            pictureBox52.Location = new Point(290, 122);
+            pictureBox52.Margin = new Padding(3, 2, 3, 2);
             pictureBox52.Name = "pictureBox52";
-            pictureBox52.Size = new Size(85, 84);
+            pictureBox52.Size = new Size(74, 63);
             pictureBox52.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox52.TabIndex = 115;
             pictureBox52.TabStop = false;
@@ -456,9 +475,10 @@
             // 
             pictureBox51.BackColor = Color.Transparent;
             pictureBox51.Image = Resource1.Black_Pawn;
-            pictureBox51.Location = new Point(245, 159);
+            pictureBox51.Location = new Point(214, 119);
+            pictureBox51.Margin = new Padding(3, 2, 3, 2);
             pictureBox51.Name = "pictureBox51";
-            pictureBox51.Size = new Size(85, 84);
+            pictureBox51.Size = new Size(74, 63);
             pictureBox51.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox51.TabIndex = 114;
             pictureBox51.TabStop = false;
@@ -470,9 +490,10 @@
             // 
             pictureBox50.BackColor = Color.Transparent;
             pictureBox50.Image = Resource1.Black_Pawn;
-            pictureBox50.Location = new Point(161, 161);
+            pictureBox50.Location = new Point(141, 121);
+            pictureBox50.Margin = new Padding(3, 2, 3, 2);
             pictureBox50.Name = "pictureBox50";
-            pictureBox50.Size = new Size(85, 84);
+            pictureBox50.Size = new Size(74, 63);
             pictureBox50.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox50.TabIndex = 113;
             pictureBox50.TabStop = false;
@@ -484,9 +505,10 @@
             // 
             pictureBox49.BackColor = Color.Transparent;
             pictureBox49.Image = Resource1.Black_Pawn;
-            pictureBox49.Location = new Point(78, 163);
+            pictureBox49.Location = new Point(68, 122);
+            pictureBox49.Margin = new Padding(3, 2, 3, 2);
             pictureBox49.Name = "pictureBox49";
-            pictureBox49.Size = new Size(85, 84);
+            pictureBox49.Size = new Size(74, 63);
             pictureBox49.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox49.TabIndex = 112;
             pictureBox49.TabStop = false;
@@ -497,9 +519,10 @@
             // pictureBox48
             // 
             pictureBox48.BackColor = Color.Transparent;
-            pictureBox48.Location = new Point(667, 247);
+            pictureBox48.Location = new Point(584, 185);
+            pictureBox48.Margin = new Padding(3, 2, 3, 2);
             pictureBox48.Name = "pictureBox48";
-            pictureBox48.Size = new Size(85, 84);
+            pictureBox48.Size = new Size(74, 63);
             pictureBox48.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox48.TabIndex = 111;
             pictureBox48.TabStop = false;
@@ -509,9 +532,10 @@
             // pictureBox47
             // 
             pictureBox47.BackColor = Color.Transparent;
-            pictureBox47.Location = new Point(583, 245);
+            pictureBox47.Location = new Point(510, 184);
+            pictureBox47.Margin = new Padding(3, 2, 3, 2);
             pictureBox47.Name = "pictureBox47";
-            pictureBox47.Size = new Size(85, 84);
+            pictureBox47.Size = new Size(74, 63);
             pictureBox47.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox47.TabIndex = 110;
             pictureBox47.TabStop = false;
@@ -521,9 +545,10 @@
             // pictureBox46
             // 
             pictureBox46.BackColor = Color.Transparent;
-            pictureBox46.Location = new Point(499, 247);
+            pictureBox46.Location = new Point(437, 185);
+            pictureBox46.Margin = new Padding(3, 2, 3, 2);
             pictureBox46.Name = "pictureBox46";
-            pictureBox46.Size = new Size(85, 84);
+            pictureBox46.Size = new Size(74, 63);
             pictureBox46.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox46.TabIndex = 109;
             pictureBox46.TabStop = false;
@@ -533,9 +558,10 @@
             // pictureBox45
             // 
             pictureBox45.BackColor = Color.Transparent;
-            pictureBox45.Location = new Point(415, 245);
+            pictureBox45.Location = new Point(363, 184);
+            pictureBox45.Margin = new Padding(3, 2, 3, 2);
             pictureBox45.Name = "pictureBox45";
-            pictureBox45.Size = new Size(85, 84);
+            pictureBox45.Size = new Size(74, 63);
             pictureBox45.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox45.TabIndex = 108;
             pictureBox45.TabStop = false;
@@ -545,9 +571,10 @@
             // pictureBox44
             // 
             pictureBox44.BackColor = Color.Transparent;
-            pictureBox44.Location = new Point(331, 245);
+            pictureBox44.Location = new Point(290, 184);
+            pictureBox44.Margin = new Padding(3, 2, 3, 2);
             pictureBox44.Name = "pictureBox44";
-            pictureBox44.Size = new Size(85, 84);
+            pictureBox44.Size = new Size(74, 63);
             pictureBox44.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox44.TabIndex = 107;
             pictureBox44.TabStop = false;
@@ -557,9 +584,10 @@
             // pictureBox43
             // 
             pictureBox43.BackColor = Color.Transparent;
-            pictureBox43.Location = new Point(245, 247);
+            pictureBox43.Location = new Point(214, 185);
+            pictureBox43.Margin = new Padding(3, 2, 3, 2);
             pictureBox43.Name = "pictureBox43";
-            pictureBox43.Size = new Size(85, 84);
+            pictureBox43.Size = new Size(74, 63);
             pictureBox43.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox43.TabIndex = 106;
             pictureBox43.TabStop = false;
@@ -569,9 +597,10 @@
             // pictureBox42
             // 
             pictureBox42.BackColor = Color.Transparent;
-            pictureBox42.Location = new Point(161, 245);
+            pictureBox42.Location = new Point(141, 184);
+            pictureBox42.Margin = new Padding(3, 2, 3, 2);
             pictureBox42.Name = "pictureBox42";
-            pictureBox42.Size = new Size(85, 84);
+            pictureBox42.Size = new Size(74, 63);
             pictureBox42.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox42.TabIndex = 105;
             pictureBox42.TabStop = false;
@@ -581,9 +610,10 @@
             // pictureBox41
             // 
             pictureBox41.BackColor = Color.Transparent;
-            pictureBox41.Location = new Point(78, 247);
+            pictureBox41.Location = new Point(68, 185);
+            pictureBox41.Margin = new Padding(3, 2, 3, 2);
             pictureBox41.Name = "pictureBox41";
-            pictureBox41.Size = new Size(85, 84);
+            pictureBox41.Size = new Size(74, 63);
             pictureBox41.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox41.TabIndex = 104;
             pictureBox41.TabStop = false;
@@ -593,9 +623,10 @@
             // pictureBox40
             // 
             pictureBox40.BackColor = Color.Transparent;
-            pictureBox40.Location = new Point(667, 331);
+            pictureBox40.Location = new Point(584, 248);
+            pictureBox40.Margin = new Padding(3, 2, 3, 2);
             pictureBox40.Name = "pictureBox40";
-            pictureBox40.Size = new Size(85, 84);
+            pictureBox40.Size = new Size(74, 63);
             pictureBox40.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox40.TabIndex = 103;
             pictureBox40.TabStop = false;
@@ -605,9 +636,10 @@
             // pictureBox39
             // 
             pictureBox39.BackColor = Color.Transparent;
-            pictureBox39.Location = new Point(583, 331);
+            pictureBox39.Location = new Point(510, 248);
+            pictureBox39.Margin = new Padding(3, 2, 3, 2);
             pictureBox39.Name = "pictureBox39";
-            pictureBox39.Size = new Size(85, 84);
+            pictureBox39.Size = new Size(74, 63);
             pictureBox39.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox39.TabIndex = 102;
             pictureBox39.TabStop = false;
@@ -617,9 +649,10 @@
             // pictureBox38
             // 
             pictureBox38.BackColor = Color.Transparent;
-            pictureBox38.Location = new Point(501, 331);
+            pictureBox38.Location = new Point(438, 248);
+            pictureBox38.Margin = new Padding(3, 2, 3, 2);
             pictureBox38.Name = "pictureBox38";
-            pictureBox38.Size = new Size(85, 84);
+            pictureBox38.Size = new Size(74, 63);
             pictureBox38.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox38.TabIndex = 101;
             pictureBox38.TabStop = false;
@@ -629,9 +662,10 @@
             // pictureBox37
             // 
             pictureBox37.BackColor = Color.Transparent;
-            pictureBox37.Location = new Point(414, 331);
+            pictureBox37.Location = new Point(362, 248);
+            pictureBox37.Margin = new Padding(3, 2, 3, 2);
             pictureBox37.Name = "pictureBox37";
-            pictureBox37.Size = new Size(85, 84);
+            pictureBox37.Size = new Size(74, 63);
             pictureBox37.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox37.TabIndex = 100;
             pictureBox37.TabStop = false;
@@ -641,9 +675,10 @@
             // pictureBox36
             // 
             pictureBox36.BackColor = Color.Transparent;
-            pictureBox36.Location = new Point(331, 331);
+            pictureBox36.Location = new Point(290, 248);
+            pictureBox36.Margin = new Padding(3, 2, 3, 2);
             pictureBox36.Name = "pictureBox36";
-            pictureBox36.Size = new Size(85, 84);
+            pictureBox36.Size = new Size(74, 63);
             pictureBox36.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox36.TabIndex = 99;
             pictureBox36.TabStop = false;
@@ -653,9 +688,10 @@
             // pictureBox35
             // 
             pictureBox35.BackColor = Color.Transparent;
-            pictureBox35.Location = new Point(245, 331);
+            pictureBox35.Location = new Point(214, 248);
+            pictureBox35.Margin = new Padding(3, 2, 3, 2);
             pictureBox35.Name = "pictureBox35";
-            pictureBox35.Size = new Size(85, 84);
+            pictureBox35.Size = new Size(74, 63);
             pictureBox35.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox35.TabIndex = 98;
             pictureBox35.TabStop = false;
@@ -665,9 +701,10 @@
             // pictureBox34
             // 
             pictureBox34.BackColor = Color.Transparent;
-            pictureBox34.Location = new Point(162, 331);
+            pictureBox34.Location = new Point(142, 248);
+            pictureBox34.Margin = new Padding(3, 2, 3, 2);
             pictureBox34.Name = "pictureBox34";
-            pictureBox34.Size = new Size(85, 84);
+            pictureBox34.Size = new Size(74, 63);
             pictureBox34.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox34.TabIndex = 97;
             pictureBox34.TabStop = false;
@@ -677,9 +714,10 @@
             // pictureBox33
             // 
             pictureBox33.BackColor = Color.Transparent;
-            pictureBox33.Location = new Point(78, 331);
+            pictureBox33.Location = new Point(68, 248);
+            pictureBox33.Margin = new Padding(3, 2, 3, 2);
             pictureBox33.Name = "pictureBox33";
-            pictureBox33.Size = new Size(85, 84);
+            pictureBox33.Size = new Size(74, 63);
             pictureBox33.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox33.TabIndex = 96;
             pictureBox33.TabStop = false;
@@ -689,9 +727,10 @@
             // pictureBox32
             // 
             pictureBox32.BackColor = Color.Transparent;
-            pictureBox32.Location = new Point(667, 413);
+            pictureBox32.Location = new Point(584, 310);
+            pictureBox32.Margin = new Padding(3, 2, 3, 2);
             pictureBox32.Name = "pictureBox32";
-            pictureBox32.Size = new Size(85, 84);
+            pictureBox32.Size = new Size(74, 63);
             pictureBox32.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox32.TabIndex = 95;
             pictureBox32.TabStop = false;
@@ -701,9 +740,10 @@
             // pictureBox31
             // 
             pictureBox31.BackColor = Color.Transparent;
-            pictureBox31.Location = new Point(583, 413);
+            pictureBox31.Location = new Point(510, 310);
+            pictureBox31.Margin = new Padding(3, 2, 3, 2);
             pictureBox31.Name = "pictureBox31";
-            pictureBox31.Size = new Size(85, 84);
+            pictureBox31.Size = new Size(74, 63);
             pictureBox31.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox31.TabIndex = 94;
             pictureBox31.TabStop = false;
@@ -713,9 +753,10 @@
             // pictureBox30
             // 
             pictureBox30.BackColor = Color.Transparent;
-            pictureBox30.Location = new Point(499, 413);
+            pictureBox30.Location = new Point(437, 310);
+            pictureBox30.Margin = new Padding(3, 2, 3, 2);
             pictureBox30.Name = "pictureBox30";
-            pictureBox30.Size = new Size(85, 84);
+            pictureBox30.Size = new Size(74, 63);
             pictureBox30.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox30.TabIndex = 93;
             pictureBox30.TabStop = false;
@@ -725,9 +766,10 @@
             // pictureBox29
             // 
             pictureBox29.BackColor = Color.Transparent;
-            pictureBox29.Location = new Point(414, 413);
+            pictureBox29.Location = new Point(362, 310);
+            pictureBox29.Margin = new Padding(3, 2, 3, 2);
             pictureBox29.Name = "pictureBox29";
-            pictureBox29.Size = new Size(85, 84);
+            pictureBox29.Size = new Size(74, 63);
             pictureBox29.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox29.TabIndex = 92;
             pictureBox29.TabStop = false;
@@ -737,9 +779,10 @@
             // pictureBox28
             // 
             pictureBox28.BackColor = Color.Transparent;
-            pictureBox28.Location = new Point(331, 413);
+            pictureBox28.Location = new Point(290, 310);
+            pictureBox28.Margin = new Padding(3, 2, 3, 2);
             pictureBox28.Name = "pictureBox28";
-            pictureBox28.Size = new Size(85, 84);
+            pictureBox28.Size = new Size(74, 63);
             pictureBox28.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox28.TabIndex = 91;
             pictureBox28.TabStop = false;
@@ -749,9 +792,10 @@
             // pictureBox27
             // 
             pictureBox27.BackColor = Color.Transparent;
-            pictureBox27.Location = new Point(246, 413);
+            pictureBox27.Location = new Point(215, 310);
+            pictureBox27.Margin = new Padding(3, 2, 3, 2);
             pictureBox27.Name = "pictureBox27";
-            pictureBox27.Size = new Size(85, 84);
+            pictureBox27.Size = new Size(74, 63);
             pictureBox27.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox27.TabIndex = 90;
             pictureBox27.TabStop = false;
@@ -761,9 +805,10 @@
             // pictureBox26
             // 
             pictureBox26.BackColor = Color.Transparent;
-            pictureBox26.Location = new Point(162, 413);
+            pictureBox26.Location = new Point(142, 310);
+            pictureBox26.Margin = new Padding(3, 2, 3, 2);
             pictureBox26.Name = "pictureBox26";
-            pictureBox26.Size = new Size(85, 84);
+            pictureBox26.Size = new Size(74, 63);
             pictureBox26.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox26.TabIndex = 89;
             pictureBox26.TabStop = false;
@@ -773,9 +818,10 @@
             // pictureBox25
             // 
             pictureBox25.BackColor = Color.Transparent;
-            pictureBox25.Location = new Point(78, 413);
+            pictureBox25.Location = new Point(68, 310);
+            pictureBox25.Margin = new Padding(3, 2, 3, 2);
             pictureBox25.Name = "pictureBox25";
-            pictureBox25.Size = new Size(85, 84);
+            pictureBox25.Size = new Size(74, 63);
             pictureBox25.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox25.TabIndex = 88;
             pictureBox25.TabStop = false;
@@ -785,9 +831,10 @@
             // pictureBox24
             // 
             pictureBox24.BackColor = Color.Transparent;
-            pictureBox24.Location = new Point(669, 499);
+            pictureBox24.Location = new Point(585, 374);
+            pictureBox24.Margin = new Padding(3, 2, 3, 2);
             pictureBox24.Name = "pictureBox24";
-            pictureBox24.Size = new Size(85, 84);
+            pictureBox24.Size = new Size(74, 63);
             pictureBox24.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox24.TabIndex = 87;
             pictureBox24.TabStop = false;
@@ -797,9 +844,10 @@
             // pictureBox23
             // 
             pictureBox23.BackColor = Color.Transparent;
-            pictureBox23.Location = new Point(583, 499);
+            pictureBox23.Location = new Point(510, 374);
+            pictureBox23.Margin = new Padding(3, 2, 3, 2);
             pictureBox23.Name = "pictureBox23";
-            pictureBox23.Size = new Size(85, 84);
+            pictureBox23.Size = new Size(74, 63);
             pictureBox23.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox23.TabIndex = 86;
             pictureBox23.TabStop = false;
@@ -809,9 +857,10 @@
             // pictureBox22
             // 
             pictureBox22.BackColor = Color.Transparent;
-            pictureBox22.Location = new Point(501, 499);
+            pictureBox22.Location = new Point(438, 374);
+            pictureBox22.Margin = new Padding(3, 2, 3, 2);
             pictureBox22.Name = "pictureBox22";
-            pictureBox22.Size = new Size(85, 84);
+            pictureBox22.Size = new Size(74, 63);
             pictureBox22.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox22.TabIndex = 85;
             pictureBox22.TabStop = false;
@@ -821,9 +870,10 @@
             // pictureBox21
             // 
             pictureBox21.BackColor = Color.Transparent;
-            pictureBox21.Location = new Point(415, 499);
+            pictureBox21.Location = new Point(363, 374);
+            pictureBox21.Margin = new Padding(3, 2, 3, 2);
             pictureBox21.Name = "pictureBox21";
-            pictureBox21.Size = new Size(85, 84);
+            pictureBox21.Size = new Size(74, 63);
             pictureBox21.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox21.TabIndex = 84;
             pictureBox21.TabStop = false;
@@ -833,9 +883,10 @@
             // pictureBox20
             // 
             pictureBox20.BackColor = Color.Transparent;
-            pictureBox20.Location = new Point(331, 499);
+            pictureBox20.Location = new Point(290, 374);
+            pictureBox20.Margin = new Padding(3, 2, 3, 2);
             pictureBox20.Name = "pictureBox20";
-            pictureBox20.Size = new Size(85, 84);
+            pictureBox20.Size = new Size(74, 63);
             pictureBox20.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox20.TabIndex = 83;
             pictureBox20.TabStop = false;
@@ -845,9 +896,10 @@
             // pictureBox19
             // 
             pictureBox19.BackColor = Color.Transparent;
-            pictureBox19.Location = new Point(247, 499);
+            pictureBox19.Location = new Point(216, 374);
+            pictureBox19.Margin = new Padding(3, 2, 3, 2);
             pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(85, 84);
+            pictureBox19.Size = new Size(74, 63);
             pictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox19.TabIndex = 82;
             pictureBox19.TabStop = false;
@@ -857,9 +909,10 @@
             // pictureBox18
             // 
             pictureBox18.BackColor = Color.Transparent;
-            pictureBox18.Location = new Point(162, 499);
+            pictureBox18.Location = new Point(142, 374);
+            pictureBox18.Margin = new Padding(3, 2, 3, 2);
             pictureBox18.Name = "pictureBox18";
-            pictureBox18.Size = new Size(85, 84);
+            pictureBox18.Size = new Size(74, 63);
             pictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox18.TabIndex = 81;
             pictureBox18.TabStop = false;
@@ -869,9 +922,10 @@
             // pictureBox17
             // 
             pictureBox17.BackColor = Color.Transparent;
-            pictureBox17.Location = new Point(78, 499);
+            pictureBox17.Location = new Point(68, 374);
+            pictureBox17.Margin = new Padding(3, 2, 3, 2);
             pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new Size(85, 84);
+            pictureBox17.Size = new Size(74, 63);
             pictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox17.TabIndex = 80;
             pictureBox17.TabStop = false;
@@ -882,9 +936,10 @@
             // 
             pictureBox16.BackColor = Color.Transparent;
             pictureBox16.Image = Resource1.White_Pawn;
-            pictureBox16.Location = new Point(669, 584);
+            pictureBox16.Location = new Point(585, 438);
+            pictureBox16.Margin = new Padding(3, 2, 3, 2);
             pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(85, 84);
+            pictureBox16.Size = new Size(74, 63);
             pictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox16.TabIndex = 79;
             pictureBox16.TabStop = false;
@@ -896,9 +951,10 @@
             // 
             pictureBox15.BackColor = Color.Transparent;
             pictureBox15.Image = Resource1.White_Pawn;
-            pictureBox15.Location = new Point(583, 583);
+            pictureBox15.Location = new Point(510, 437);
+            pictureBox15.Margin = new Padding(3, 2, 3, 2);
             pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(85, 84);
+            pictureBox15.Size = new Size(74, 63);
             pictureBox15.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox15.TabIndex = 78;
             pictureBox15.TabStop = false;
@@ -910,9 +966,10 @@
             // 
             pictureBox14.BackColor = Color.Transparent;
             pictureBox14.Image = Resource1.White_Pawn;
-            pictureBox14.Location = new Point(501, 583);
+            pictureBox14.Location = new Point(438, 437);
+            pictureBox14.Margin = new Padding(3, 2, 3, 2);
             pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(85, 84);
+            pictureBox14.Size = new Size(74, 63);
             pictureBox14.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox14.TabIndex = 77;
             pictureBox14.TabStop = false;
@@ -924,9 +981,10 @@
             // 
             pictureBox13.BackColor = Color.Transparent;
             pictureBox13.Image = Resource1.White_Pawn;
-            pictureBox13.Location = new Point(415, 584);
+            pictureBox13.Location = new Point(363, 438);
+            pictureBox13.Margin = new Padding(3, 2, 3, 2);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(85, 84);
+            pictureBox13.Size = new Size(74, 63);
             pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox13.TabIndex = 76;
             pictureBox13.TabStop = false;
@@ -938,9 +996,10 @@
             // 
             pictureBox12.BackColor = Color.Transparent;
             pictureBox12.Image = Resource1.White_Pawn;
-            pictureBox12.Location = new Point(331, 584);
+            pictureBox12.Location = new Point(290, 438);
+            pictureBox12.Margin = new Padding(3, 2, 3, 2);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(85, 84);
+            pictureBox12.Size = new Size(74, 63);
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox12.TabIndex = 75;
             pictureBox12.TabStop = false;
@@ -952,9 +1011,10 @@
             // 
             pictureBox11.BackColor = Color.Transparent;
             pictureBox11.Image = Resource1.White_Pawn;
-            pictureBox11.Location = new Point(247, 583);
+            pictureBox11.Location = new Point(216, 437);
+            pictureBox11.Margin = new Padding(3, 2, 3, 2);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(85, 84);
+            pictureBox11.Size = new Size(74, 63);
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 74;
             pictureBox11.TabStop = false;
@@ -966,9 +1026,10 @@
             // 
             pictureBox10.BackColor = Color.Transparent;
             pictureBox10.Image = Resource1.White_Pawn;
-            pictureBox10.Location = new Point(162, 584);
+            pictureBox10.Location = new Point(142, 438);
+            pictureBox10.Margin = new Padding(3, 2, 3, 2);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(85, 84);
+            pictureBox10.Size = new Size(74, 63);
             pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox10.TabIndex = 73;
             pictureBox10.TabStop = false;
@@ -980,9 +1041,10 @@
             // 
             pictureBox9.BackColor = Color.Transparent;
             pictureBox9.Image = Resource1.White_Pawn;
-            pictureBox9.Location = new Point(78, 583);
+            pictureBox9.Location = new Point(68, 437);
+            pictureBox9.Margin = new Padding(3, 2, 3, 2);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(85, 84);
+            pictureBox9.Size = new Size(74, 63);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox9.TabIndex = 72;
             pictureBox9.TabStop = false;
@@ -994,12 +1056,14 @@
             // 
             pictureBox8.BackColor = Color.Transparent;
             pictureBox8.Image = Resource1.White_Rook;
-            pictureBox8.Location = new Point(669, 667);
+            pictureBox8.Location = new Point(585, 500);
+            pictureBox8.Margin = new Padding(3, 2, 3, 2);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(85, 84);
+            pictureBox8.Size = new Size(74, 63);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 15;
             pictureBox8.TabStop = false;
+            pictureBox8.Tag = "White_Rook";
             pictureBox8.Click += SeleccionaPieza;
             pictureBox8.DoubleClick += CasillaDestino;
             // 
@@ -1007,9 +1071,10 @@
             // 
             pictureBox7.BackColor = Color.Transparent;
             pictureBox7.Image = Resource1.White_Knight;
-            pictureBox7.Location = new Point(587, 667);
+            pictureBox7.Location = new Point(514, 500);
+            pictureBox7.Margin = new Padding(3, 2, 3, 2);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(85, 84);
+            pictureBox7.Size = new Size(74, 63);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 14;
             pictureBox7.TabStop = false;
@@ -1021,9 +1086,10 @@
             // 
             pictureBox6.BackColor = Color.Transparent;
             pictureBox6.Image = Resource1.White_Bishop;
-            pictureBox6.Location = new Point(501, 667);
+            pictureBox6.Location = new Point(438, 500);
+            pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(85, 84);
+            pictureBox6.Size = new Size(74, 63);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 13;
             pictureBox6.TabStop = false;
@@ -1035,9 +1101,10 @@
             // 
             pictureBox5.BackColor = Color.Transparent;
             pictureBox5.Image = Resource1.White_King;
-            pictureBox5.Location = new Point(415, 668);
+            pictureBox5.Location = new Point(363, 501);
+            pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(85, 84);
+            pictureBox5.Size = new Size(74, 63);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 12;
             pictureBox5.TabStop = false;
@@ -1049,9 +1116,10 @@
             // 
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.Image = Resource1.White_Queen;
-            pictureBox4.Location = new Point(331, 668);
+            pictureBox4.Location = new Point(290, 501);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(85, 84);
+            pictureBox4.Size = new Size(74, 63);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 11;
             pictureBox4.TabStop = false;
@@ -1063,9 +1131,10 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = Resource1.White_Bishop;
-            pictureBox3.Location = new Point(247, 668);
+            pictureBox3.Location = new Point(216, 501);
+            pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(85, 84);
+            pictureBox3.Size = new Size(74, 63);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 10;
             pictureBox3.TabStop = false;
@@ -1077,9 +1146,10 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = Resource1.White_Knight;
-            pictureBox2.Location = new Point(162, 667);
+            pictureBox2.Location = new Point(142, 500);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(85, 84);
+            pictureBox2.Size = new Size(74, 63);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 9;
             pictureBox2.TabStop = false;
@@ -1087,15 +1157,29 @@
             pictureBox2.Click += SeleccionaPieza;
             pictureBox2.DoubleClick += CasillaDestino;
             // 
+            // pbPieza
+            // 
+            pbPieza.BackColor = Color.Transparent;
+            pbPieza.Location = new Point(769, 109);
+            pbPieza.Margin = new Padding(3, 2, 3, 2);
+            pbPieza.Name = "pbPieza";
+            pbPieza.Size = new Size(74, 63);
+            pbPieza.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbPieza.TabIndex = 128;
+            pbPieza.TabStop = false;
+            pbPieza.Tag = "Black_Pawn";
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1051, 825);
+            ClientSize = new Size(920, 619);
+            Controls.Add(pbPieza);
             Controls.Add(panel1);
             Controls.Add(button4);
             Controls.Add(pepe);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -1164,6 +1248,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbPieza).EndInit();
             ResumeLayout(false);
         }
 
@@ -1236,5 +1321,6 @@
         private PictureBox pictureBox31;
         private PictureBox pictureBox30;
         private PictureBox pictureBox29;
+        private PictureBox pbPieza;
     }
 }
