@@ -97,6 +97,7 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pbPieza = new PictureBox();
+            lblTurno = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox64).BeginInit();
@@ -1169,11 +1170,20 @@
             pbPieza.TabStop = false;
             pbPieza.Tag = "Black_Pawn";
             // 
+            // lblTurno
+            // 
+            lblTurno.AutoSize = true;
+            lblTurno.Location = new Point(751, 19);
+            lblTurno.Name = "lblTurno";
+            lblTurno.Size = new Size(0, 15);
+            lblTurno.TabIndex = 129;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(920, 619);
+            Controls.Add(lblTurno);
             Controls.Add(pbPieza);
             Controls.Add(panel1);
             Controls.Add(button4);
@@ -1250,6 +1260,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPieza).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -1322,5 +1333,6 @@
         private PictureBox pictureBox30;
         private PictureBox pictureBox29;
         private PictureBox pbPieza;
+        private Label lblTurno;
     }
 }
