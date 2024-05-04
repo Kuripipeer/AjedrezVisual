@@ -2,6 +2,7 @@ using AjedrezVisual.Properties;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
+using static System.Windows.Forms.DataFormats;
 
 namespace AjedrezVisual
 {
@@ -9,6 +10,9 @@ namespace AjedrezVisual
     {
         int seleccion = 0;
         string[,] tablero = new string[8, 8];
+        bool turno = true;
+        string pieza = "";
+        bool MovimientoValido = false;
 
         public Form1()
         {
@@ -55,31 +59,30 @@ namespace AjedrezVisual
         private void SeleccionaPieza(object sender, EventArgs e)
         {
             // Obtiene la posición de un control PictureBox
-
-            
-
-
             Point position = GetPictureBoxPosition(sender);
             if (sender is PictureBox pictureBox)
             {
                 //Stream imageStream = Properties.Resources.ResourceManager.GetObject("Black_Rook").GetType().Assembly.GetManifestResourceStream("myImage.png");
                 if (pictureBox.Image != null)
                 {
+
+
                     string fileName = pictureBox.Tag.ToString();
                     //MessageBox.Show("Filename: " + fileName);
                     pbPieza.Image = pictureBox.Image;
                     pbPieza.Tag = pictureBox.Tag;
+                    pieza = pictureBox.Name;
 
 
 
-                    if (fileName.Contains("White"))
-                    {
-                        MessageBox.Show("Pieza blanca");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Racista");
-                    }
+                    //if (fileName.Contains("White"))
+                    //{
+                    //    MessageBox.Show("Pieza blanca");
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Racista");
+                    //}
 
                     seleccion = 1;
                 }
@@ -97,38 +100,81 @@ namespace AjedrezVisual
             Point point = sender.GetType().Name.ToLower() == "picturebox" ? ((PictureBox)sender).Location : new Point();
             return point;
         }
-
-        private bool MoverPieza(object sender, EventArgs e)
+        private void CasillaDestino(object sender, EventArgs e)
         {
-            if(seleccion == 1)
+
+            if (seleccion == 1)
             {
                 // Obtiene la posición de un control PictureBox
                 Point position = GetPictureBoxPosition(sender);
                 sender.GetType().GetProperty("Image").SetValue(sender, pbPieza.Image);
                 sender.GetType().GetProperty("Tag").SetValue(sender, pbPieza.Tag);
+
+                PictureBox pictureBox = null;
+                foreach (Control control in panel1.Controls)
+                {
+                    if (control.Name == pieza && control is PictureBox)
+                    {
+                        pictureBox = (PictureBox)control;
+                        break;
+                    }
+                }
+
+                if (pictureBox != null)
+                {
+                    // PictureBox found, perform actions on it
+
+                    //MessageBox.Show("PictureBox found: " + pictureBox.Name);
+                    pictureBox.Image = null;
+                    pictureBox.Tag = null;
+                    //pbPieza.Image = null;
+                    //pbPieza.Tag = null;
+                }
+                else
+                {
+                    MessageBox.Show("PictureBox with ID 'myPictureBox' not found within the panel.");
+                }
+
                 //pbPieza.Location = position;
                 seleccion = 0;
-                return true;
+                //return MovimientoValido = true;
+                
             }
             else
             {
                 MessageBox.Show("Selecciona una pieza a mover.");
-                return false;
+                //return MovimientoValido = false;
             }
-        }
 
-        private void CasillaDestino(object sender, EventArgs e)
-        {
-            if(MoverPieza(sender, e))
-            {
-                // Obtiene la posición de un control PictureBox
-                pbPieza.Image = null;
-                pbPieza.Tag = null;
-            }
+
 
             //// Obtiene la posición de un control PictureBox
             //Point position = GetPictureBoxPosition(sender);
             //MessageBox.Show("Posición final "+position.ToString());
         }
+        //private bool MoverPieza(Point position)
+        //{
+        //    Control controlAtPoint = panel1.GetChildAtPoint(position);
+        //    if (controlAtPoint != null)
+        //    {
+        //        if (controlAtPoint is PictureBox pictureBox)
+        //        {
+        //            if (pictureBox.Image != null)
+        //            {
+        //                MessageBox.Show("Casilla ocupada.");
+        //                return MovimientoValido = false;
+        //            }
+        //            else
+        //            {
+        //                pictureBox.Image = pbPieza.Image;
+        //                pictureBox.Tag = pbPieza.Tag;
+        //                return MovimientoValido = true;
+        //            }
+        //        }
+        //    }
+        //    return MovimientoValido = false;
+        //}
+
+       
     }
 }
