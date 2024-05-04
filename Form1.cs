@@ -106,16 +106,7 @@ namespace AjedrezVisual
                 // Obtiene la posición de un control PictureBox
                 Point position = GetPictureBoxPosition(sender);
                 posicionFinal = position;
-                //if (sender is PictureBox pictureBoxWithTag)
-                //{
-                //    tagValue = pictureBoxWithTag.Tag.ToString();
-                //    MessageBox.Show("Tag value: " + tagValue);
-                //}else
-                //{
-                //    MessageBox.Show("No tiene tag");
-                //    tagValue = "Libre";
-                //}
-
+                
                 if (posicionFinal == posicionInicial)
                 {
                     MessageBox.Show("No se puede mover la pieza al mismo lugar");
@@ -140,7 +131,6 @@ namespace AjedrezVisual
                         {
                             tagValue = pictureBoxWithTag.Tag.ToString();
                         }
-                        //Console.WriteLine("Tag value for PictureBox: " + tagValue);
                     }
 
                     if (tagValue.Contains("White") && tagValue != "Libre" && Turno)
@@ -155,8 +145,6 @@ namespace AjedrezVisual
 
                     sender.GetType().GetProperty("Image").SetValue(sender, pbPieza.Image);
                     sender.GetType().GetProperty("Tag").SetValue(sender, pbPieza.Tag);
-                    // PictureBox found, perform actions on it
-                    //MessageBox.Show("PictureBox found: " + pictureBox.Name);
                     pictureBox.Image = null;
                     pictureBox.Tag = null;
                     pbPieza.Image = null;

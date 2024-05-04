@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AjedrezVisual
 {
-    internal class Movimiento
+    internal class Movimientos
     {
     }
 }
