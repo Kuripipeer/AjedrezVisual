@@ -57,3 +57,23 @@
             //            break;
             //    }
             //}
+
+if(pbPieza.Tag.ToString().Contains("_Pawn"))
+                {
+                    if (!Turno)
+                    {
+                        if (posicionFinal.Y < posicionInicial.Y)
+                        {
+                            MessageBox.Show("No puedes mover la pieza hacia atrás");
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        if (posicionFinal.Y > posicionInicial.Y)
+                        {
+                            MessageBox.Show("No puedes mover la pieza hacia atrás");
+                            return;
+                        }
+                    }
+                }

@@ -38,7 +38,6 @@ namespace AjedrezVisual
             }
         }
 
-
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Restart();
@@ -48,18 +47,10 @@ namespace AjedrezVisual
         {
             pictureBox1.Image = Resource1.Black_Rook;
             pictureBox1.Tag = "Black_Rook";
-            //for (int i = 0; i < tablero.GetLength(0); i++)
-            //{
-            //    for (int j = 0; j < tablero.GetLength(1); j++)
-            //    {
-            //        MessageBox.Show(tablero[i,j]);
-            //    }
-            //}
         }
 
         private void SeleccionaPieza(object sender, EventArgs e)
         {
-
             if (seleccion == 0)
             {
                 // Obtiene la posición de un control PictureBox
@@ -69,7 +60,6 @@ namespace AjedrezVisual
 
                 if (sender is PictureBox pictureBox)
                 {
-                    //Stream imageStream = Properties.Resources.ResourceManager.GetObject("Black_Rook").GetType().Assembly.GetManifestResourceStream("myImage.png");
                     if (pictureBox.Image != null)
                     {
                         string fileName = pictureBox.Tag.ToString();
@@ -78,6 +68,21 @@ namespace AjedrezVisual
                         pbPieza.Tag = pictureBox.Tag;
                         pieza = pictureBox.Name;
 
+                        if (fileName.Contains("Black") && Turno)
+                        {
+                            MessageBox.Show("No puedes mover");
+                            pbPieza.Image = null;
+                            pbPieza.Tag = null;
+                            return;
+                        }
+                        else if (fileName.Contains("White") && !Turno)
+                        {
+                            MessageBox.Show("No puedes mover");
+                            pbPieza.Image = null;
+                            pbPieza.Tag = null;
+                            return;
+                        }
+                        
                         seleccion++;
                     }
                     else
@@ -87,7 +92,6 @@ namespace AjedrezVisual
                 }
             }
         }
-
         private Point GetPictureBoxPosition(object sender)
         {
             // Obtiene la posición de un control PictureBox
@@ -96,12 +100,21 @@ namespace AjedrezVisual
         }
         private void CasillaDestino(object sender, EventArgs e)
         {
+            string tagValue = "Libre";
             if (seleccion == 1)
             {
-
                 // Obtiene la posición de un control PictureBox
                 Point position = GetPictureBoxPosition(sender);
                 posicionFinal = position;
+                //if (sender is PictureBox pictureBoxWithTag)
+                //{
+                //    tagValue = pictureBoxWithTag.Tag.ToString();
+                //    MessageBox.Show("Tag value: " + tagValue);
+                //}else
+                //{
+                //    MessageBox.Show("No tiene tag");
+                //    tagValue = "Libre";
+                //}
 
                 if (posicionFinal == posicionInicial)
                 {
@@ -121,6 +134,25 @@ namespace AjedrezVisual
 
                 if (pictureBox != null && pictureBox.Image != null)
                 {
+                    if (sender is PictureBox pictureBoxWithTag)
+                    {
+                        if (pictureBoxWithTag.Tag != null)
+                        {
+                            tagValue = pictureBoxWithTag.Tag.ToString();
+                        }
+                        //Console.WriteLine("Tag value for PictureBox: " + tagValue);
+                    }
+
+                    if (tagValue.Contains("White") && tagValue != "Libre" && Turno)
+                    {
+                        MessageBox.Show("No puedes mover la pieza a esta posición");
+                        return;
+                    } else if (tagValue.Contains("Black") && tagValue != "Libre" && !Turno)
+                    {
+                        MessageBox.Show("No puedes mover la pieza a esta posición");
+                        return;
+                    }
+
                     sender.GetType().GetProperty("Image").SetValue(sender, pbPieza.Image);
                     sender.GetType().GetProperty("Tag").SetValue(sender, pbPieza.Tag);
                     // PictureBox found, perform actions on it
@@ -137,10 +169,7 @@ namespace AjedrezVisual
                     MessageBox.Show("No se puede mover la pieza a esta posición");
                 }
 
-                //pbPieza.Location = position;
-                seleccion = 0;
-                //return MovimientoValido = true;
-                
+                seleccion = 0;                
             }
             else
             {
