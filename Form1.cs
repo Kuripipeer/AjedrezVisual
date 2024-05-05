@@ -11,7 +11,7 @@ namespace AjedrezVisual
         Movimientos movimientos = new Movimientos();
 
         int seleccion = 0;
-        string[,] tablero = new string[8, 8];
+        string[,] tablero = new string[8,8];
         bool turno = true;
         string pieza = "";
         Point posicionInicial, posicionFinal;
@@ -25,10 +25,11 @@ namespace AjedrezVisual
 
         public void ActualizarTablero()
         {
+
             int i = 0;
             int j = 0;
 
-            foreach (PictureBox picture in panel1.Controls.OfType<PictureBox>())
+            foreach (PictureBox picture in panel1.Controls.OfType<PictureBox>().Reverse<PictureBox>())
             {
                 if (picture.Tag != null)
                 {
@@ -86,7 +87,6 @@ namespace AjedrezVisual
                 // Obtiene la posición de un control PictureBox
                 Point position = GetPictureBoxPosition(sender);
                 posicionInicial = position;
-            
 
                 if (sender is PictureBox pictureBox)
                 {
@@ -113,16 +113,7 @@ namespace AjedrezVisual
                             return;
                         }
 
-                        string tag = "";
-                        for (int i = 0; i < 8; i++)
-                        {
-                            for (int j = 0; j < 8; j++)
-                            {
-                                tag += tablero[i, j] + " - ";
-                            }
-                            tag += "\n";
-                        }
-                        MessageBox.Show(tag);
+                        
 
                         seleccion++;
                     }
@@ -141,6 +132,7 @@ namespace AjedrezVisual
         }
         private void CasillaDestino(object sender, EventArgs e)
         {
+            
             string tagValue = "";
             if (seleccion == 1)
             {
@@ -184,13 +176,16 @@ namespace AjedrezVisual
                         return;
                     }
 
+                    int ancho = pictureBox.Size.Width;
+                    int alto = pictureBox.Size.Height;
+
                     switch (pictureBox.Tag.ToString())
                     {
                         case "Black_Rook":
                             MessageBox.Show("Test");
-                            if (movimientos.MovimientoTorre(posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, tablero))
+                            if (movimientos.MovimientoTorre(posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, tablero, alto, ancho))
                             {
-                                ActualizarTablero();
+                                MoverPieza(sender,e);
                                 break;
                             }
                             else
@@ -200,9 +195,9 @@ namespace AjedrezVisual
                             }
                         case "White_Rook":
                             MessageBox.Show("Test");
-                            if (movimientos.MovimientoTorre(posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, tablero))
+                            if (movimientos.MovimientoTorre(posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, tablero, alto, ancho))
                             {
-                                ActualizarTablero();
+                                MoverPieza(sender, e);
                                 break;
                             }
                             else
@@ -227,38 +222,36 @@ namespace AjedrezVisual
                         case "White_King":
                             break;
                         case "Black_Pawn":
+                            sender.GetType().GetProperty("Image").SetValue(sender, pbPieza.Image);
+                            sender.GetType().GetProperty("Tag").SetValue(sender, pbPieza.Tag);
+
+
+                            pictureBox.Image = null;
+                            pictureBox.Tag = "";
+                            pbPieza.Image = null;
+                            pbPieza.Tag = "";
+                            turno = !turno;
+                            Jugador();
+                            ActualizarTablero();
                             break;
                         case "White_Pawn":
+                            sender.GetType().GetProperty("Image").SetValue(sender, pbPieza.Image);
+                            sender.GetType().GetProperty("Tag").SetValue(sender, pbPieza.Tag);
+
+
+                            pictureBox.Image = null;
+                            pictureBox.Tag = "";
+                            pbPieza.Image = null;
+                            pbPieza.Tag = "";
+                            turno = !turno;
+                            Jugador();
+                            ActualizarTablero();
                             break;
                         default:
                             MessageBox.Show("Pieza inválida");
                         break;
                     }
 
-                    // movimientos
-
-                    sender.GetType().GetProperty("Image").SetValue(sender, pbPieza.Image);
-                    sender.GetType().GetProperty("Tag").SetValue(sender, pbPieza.Tag);
-                    pictureBox.Image = null;
-                    pictureBox.Tag = "";
-                    pbPieza.Image = null;
-                    pbPieza.Tag = "";
-                    turno = !turno;
-                    Jugador();
-                    ActualizarTablero();
-                    MessageBox.Show("Se actualiza ");
-
-                    MessageBox.Show(pictureBox9.Tag.ToString() + " Tah");
-                    string tag = "";
-                    for (int i = 0; i < 8; i++)
-                    {
-                        for (int j = 0; j < 8; j++)
-                        {
-                            tag += tablero[i, j] + " - ";
-                        }
-                        tag += "\n";
-                    }
-                    MessageBox.Show(tag);
                 }
                 else
                 {
@@ -270,6 +263,35 @@ namespace AjedrezVisual
             else
             {
                 MessageBox.Show("Selecciona una pieza a mover.");
+            }
+        }
+
+        private void MoverPieza(object sender, EventArgs e)
+        {
+
+            PictureBox pictureBox = null;
+            foreach (Control control in panel1.Controls)
+            {
+                if (control.Name == pieza && control is PictureBox)
+                {
+                    pictureBox = (PictureBox)control;
+                    break;
+                }
+            }
+
+            if (pictureBox != null && pictureBox.Image != null)
+            {
+                sender.GetType().GetProperty("Image").SetValue(sender, pbPieza.Image);
+                sender.GetType().GetProperty("Tag").SetValue(sender, pbPieza.Tag);
+
+
+                pictureBox.Image = null;
+                pictureBox.Tag = "";
+                pbPieza.Image = null;
+                pbPieza.Tag = "";
+                turno = !turno;
+                Jugador();
+                ActualizarTablero();
             }
         }
     }
