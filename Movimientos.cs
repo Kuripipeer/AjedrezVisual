@@ -216,6 +216,7 @@ namespace AjedrezVisual
                 {
                     return true;
                 }
+
                 return true;
             }
 
