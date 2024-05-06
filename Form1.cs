@@ -21,7 +21,7 @@ namespace AjedrezVisual
             InitializeComponent();
             Jugador();
             ActualizarTablero();
-            //Info;
+            movimientos.Info();
         }
 
         public void ActualizarTablero()
@@ -369,7 +369,10 @@ namespace AjedrezVisual
 
         private void Info_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1. Elegir la pieza a mover dando un clic sobre ella y que corresponda al color del turno.\r\n\n2. Para mover la pieza dar doble clic a la dirección de destino.\r\n\n3. Si se desea cambiar a la pieza a mover presionar la imagen que se muestra a la derecha para poder seleccionar la nueva pieza.", "Como jugar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("1. Elegir la pieza a mover dando un clic sobre ella y que corresponda al color del turno.\r\n\n" +
+                "2. Para mover la pieza dar doble clic a la dirección de destino.\r\n\n" +
+                "3. Si se desea cambiar a la pieza a mover presionar la imagen que se muestra a la derecha para poder seleccionar la nueva pieza.", 
+                "Como jugar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Creditos(object sender, EventArgs e)
