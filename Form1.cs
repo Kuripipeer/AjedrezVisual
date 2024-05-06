@@ -21,6 +21,7 @@ namespace AjedrezVisual
             InitializeComponent();
             Jugador();
             ActualizarTablero();
+            //Info;
         }
 
         public void ActualizarTablero()

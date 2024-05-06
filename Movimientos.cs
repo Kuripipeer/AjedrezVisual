@@ -172,11 +172,6 @@ namespace AjedrezVisual
                 int inicio = Math.Min(yIndex, y2Index); // 7, 5 -> 5
                 int fin = Math.Max(yIndex, y2Index); // 7, 5 -> 7
 
-
-
-                MessageBox.Show("Test" + yIndex + y2Index);
-
-
                 for (int i = inicio + 1; i < fin; i++)
                 {
                     if (!string.IsNullOrWhiteSpace(tablero[i, xIndex]))
@@ -192,14 +187,13 @@ namespace AjedrezVisual
                 {
                     return true;
                 }
+
                 return true;
             }
             else if (y2Index == yIndex)
             {
                 int inicio = Math.Min(xIndex, x2Index); // 0, 3 -> 0
                 int fin = Math.Max(xIndex, x2Index); // 0, 3 -> 3
-                MessageBox.Show("Test" + xIndex + x2Index);
-                MessageBox.Show(inicio +" "+ fin );
                 for (int i = inicio + 1; i < fin; i++)
                 {
                     if (!string.IsNullOrWhiteSpace(tablero[yIndex, i]))
@@ -250,6 +244,7 @@ namespace AjedrezVisual
             int x2Index = x2 / ancho;
             y2Index = y2 / alto;
             cambio(yIndex, y2Index);
+            bool continuar = false;
 
             int diffX = Math.Abs(xIndex - x2Index);
             int diffY = Math.Abs(yIndex - y2Index);
@@ -262,16 +257,22 @@ namespace AjedrezVisual
             int dirX = (x2Index - xIndex) / diffX;
             int dirY = (y2Index - yIndex) / diffY;
 
-            for (int i = 1; i < diffX; i++)
+            for (int i = 1; i <= diffX; i++)
             {
-                if (!string.IsNullOrWhiteSpace(tablero[yIndex + i * dirY, xIndex + i * dirX]))
+                int v = xIndex + i * dirX;
+                int z = yIndex + i * dirY;
+                if (!string.IsNullOrWhiteSpace(tablero[z, v]))
                 {
                     return false;
                 }
                 else
                 {
-                    return true;
+                    continuar = true;
                 }
+            }
+            if (continuar)
+            {
+                return true;
             }
             return true;
         }   
