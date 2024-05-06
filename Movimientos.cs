@@ -173,6 +173,10 @@ namespace AjedrezVisual
                 int fin = Math.Max(yIndex, y2Index); // 7, 5 -> 7
 
 
+
+                MessageBox.Show("Test" + yIndex + y2Index);
+
+
                 for (int i = inicio + 1; i < fin; i++)
                 {
                     if (!string.IsNullOrWhiteSpace(tablero[i, xIndex]))
@@ -188,11 +192,14 @@ namespace AjedrezVisual
                 {
                     return true;
                 }
+                return true;
             }
             else if (y2Index == yIndex)
             {
                 int inicio = Math.Min(xIndex, x2Index); // 0, 3 -> 0
                 int fin = Math.Max(xIndex, x2Index); // 0, 3 -> 3
+                MessageBox.Show("Test" + xIndex + x2Index);
+                MessageBox.Show(inicio +" "+ fin );
                 for (int i = inicio + 1; i < fin; i++)
                 {
                     if (!string.IsNullOrWhiteSpace(tablero[yIndex, i]))
@@ -209,6 +216,7 @@ namespace AjedrezVisual
                 {
                     return true;
                 }
+                return true;
             }
 
             return false;
