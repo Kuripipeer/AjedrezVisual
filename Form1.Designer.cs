@@ -1169,6 +1169,7 @@
             pbPieza.TabIndex = 128;
             pbPieza.TabStop = false;
             pbPieza.Tag = "Black_Pawn";
+            pbPieza.Click += SelectNewPz;
             // 
             // lblTurno
             // 

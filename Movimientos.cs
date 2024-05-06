@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,62 +10,18 @@ namespace AjedrezVisual
 {
     public class Movimientos
     {
-
+        int yIndex;
+        int y2Index;
 
         public Movimientos()
         {
+
         }
 
-        public bool MovimientoPeon(string[,] tablero, int x, int y, int x2, int y2)
+        public int cambio(int y, int y2)
         {
-            if (tablero[x, y] == "White_Pawn")
-            {
-                if (x2 == x + 1 && y2 == y)
-                {
-                    return true;
-                }
-                else if (x2 == x + 2 && y2 == y)
-                {
-                    return true;
-                }
-                else if (x2 == x + 1 && y2 == y + 1)
-                {
-                    return true;
-                }
-                else if (x2 == x + 1 && y2 == y - 1)
-                {
-                    return true;
-                }
-            }
-            else if (tablero[x, y] == "Black_Pawn")
-            {
-                if (x2 == x - 1 && y2 == y)
-                {
-                    return true;
-                }
-                else if (x2 == x - 2 && y2 == y)
-                {
-                    return true;
-                }
-                else if (x2 == x - 1 && y2 == y + 1)
-                {
-                    return true;
-                }
-                else if (x2 == x - 1 && y2 == y - 1)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public bool MovimientoTorre(int x, int y, int x2, int y2, string[,] tablero, int alto, int ancho)
-        {
-            int xIndex = x / ancho;
-            int yIndex = y / alto;
-            int x2Index = x2 / ancho;
-            int y2Index = y2 / alto;
-            bool continuar = false;
+            y2Index = y2;
+            yIndex = y;
 
             switch (yIndex)
             {
@@ -124,6 +82,89 @@ namespace AjedrezVisual
                 default:
                     break;
             }
+            return 0;
+        }
+
+        public bool MovimientoPeon(string[,] tablero, int x, int y, int x2, int y2, int alto, int ancho)
+        {
+            int xIndex = x / ancho;
+            yIndex = y / alto;
+            int x2Index = x2 / ancho;
+            y2Index = y2 / alto;
+
+            cambio(yIndex, y2Index);
+
+            if (tablero[yIndex, xIndex] == "White_Pawn")
+            {
+                if(xIndex == x2Index)
+                {
+                    if(yIndex == 1)
+                    {
+                           if (y2Index - yIndex == 1)
+                        {
+                            return true;
+                        }
+                        else if (y2Index - yIndex == 2)
+                        {
+                            return true;
+                        }
+                    }
+                    else if (y2Index - yIndex == 1)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+                return false;
+            }
+            else if (tablero[yIndex, xIndex] == "Black_Pawn")
+            {
+                if (xIndex == x2Index)
+                {
+                    if (yIndex == 6)
+                    {
+                        if (yIndex - y2Index == 1)
+                        {
+                            return true;
+                        }
+                        else if (yIndex - y2Index == 2)
+                        {
+                            return true;
+                        }
+                    }
+                    else if (yIndex - y2Index == 1)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+                return false;
+            }
+            return false;
+        }
+
+        public bool MovimientoTorre(int x, int y, int x2, int y2, string[,] tablero, int alto, int ancho)
+        {
+            int xIndex = x / ancho;
+            yIndex = y / alto;
+            int x2Index = x2 / ancho;
+            y2Index = y2 / alto;
+            bool continuar = false;
+            cambio(yIndex, y2Index);
 
             
             if (x2Index == xIndex)
@@ -134,7 +175,6 @@ namespace AjedrezVisual
 
                 for (int i = inicio + 1; i < fin; i++)
                 {
-                    MessageBox.Show("Pieza " + tablero[i, xIndex] + " Valor i " + i + " valor x " + xIndex);
                     if (!string.IsNullOrWhiteSpace(tablero[i, xIndex]))
                     {
                         return false;
@@ -155,10 +195,8 @@ namespace AjedrezVisual
                 int fin = Math.Max(xIndex, x2Index); // 0, 3 -> 3
                 for (int i = inicio + 1; i < fin; i++)
                 {
-                    MessageBox.Show("Pieza " + tablero[yIndex, i] + " Valor i " + i + " valor y " + yIndex);
                     if (!string.IsNullOrWhiteSpace(tablero[yIndex, i]))
                     {
-                    //MessageBox.Show("Pieza " + tablero[yIndex, i] + " Valor i " + i + " valor y " + yIndex);
                         return false;
                     }
                     else
@@ -177,45 +215,61 @@ namespace AjedrezVisual
 
         }
 
-        public bool MovimientoCaballo(string[,] tablero, int x, int y, int x2, int y2)
+        public bool MovimientoCaballo(string[,] tablero, int x, int y, int x2, int y2, int alto, int ancho)
         {
-            if (tablero[x, y] == "White_Knight" || tablero[x, y] == "Black_Knight")
+
+            int xIndex = x / ancho;
+            yIndex = y / alto;
+            int x2Index = x2 / ancho;
+            y2Index = y2 / alto;
+
+            cambio(yIndex, y2Index);
+
+            if (tablero[yIndex, xIndex] == "White_Knight" || tablero[yIndex, xIndex] == "Black_Knight")
             {
-                if (x2 == x + 2 && y2 == y + 1)
-                {
-                    return true;
-                }
-                else if (x2 == x + 2 && y2 == y - 1)
-                {
-                    return true;
-                }
-                else if (x2 == x - 2 && y2 == y + 1)
-                {
-                    return true;
-                }
-                else if (x2 == x - 2 && y2 == y - 1)
-                {
-                    return true;
-                }
-                else if (x2 == x + 1 && y2 == y + 2)
-                {
-                    return true;
-                }
-                else if (x2 == x + 1 && y2 == y - 2)
-                {
-                    return true;
-                }
-                else if (x2 == x - 1 && y2 == y + 2)
-                {
-                    return true;
-                }
-                else if (x2 == x - 1 && y2 == y - 2)
-                {
-                    return true;
-                }
-                return false;
+                int difFil = Math.Abs(yIndex - y2Index);
+                int difCol = Math.Abs(xIndex - x2Index);
+                return (difFil == 2 && difCol == 1) || (difFil == 1 && difCol == 2);
             }
             return false;
         }
+
+        public bool MovimientoAlfil(string[,] tablero, int x, int y, int x2, int y2, int alto, int ancho)
+        {
+            int xIndex = x / ancho;
+            yIndex = y / alto;
+            int x2Index = x2 / ancho;
+            y2Index = y2 / alto;
+            bool continuar = false;
+            cambio(yIndex, y2Index);
+
+            int diffX = Math.Abs(xIndex - x2Index);
+            int diffY = Math.Abs(yIndex - y2Index);
+
+            if(diffX != diffY)
+            {
+                return false;
+            }
+
+            int dirX = (x2Index - xIndex) / diffX;
+            int dirY = (y2Index - yIndex) / diffY;
+
+            for (int i = 1; i < diffX; i++)
+            {
+                if (!string.IsNullOrWhiteSpace(tablero[yIndex + i * dirY, xIndex + i * dirX]))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+
+
+
+
+            return true;
+        }   
     }
 }

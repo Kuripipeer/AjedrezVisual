@@ -11,7 +11,7 @@ namespace AjedrezVisual
         Movimientos movimientos = new Movimientos();
 
         int seleccion = 0;
-        string[,] tablero = new string[8,8];
+        string[,] tablero = new string[8, 8];
         bool turno = true;
         string pieza = "";
         Point posicionInicial, posicionFinal;
@@ -112,10 +112,8 @@ namespace AjedrezVisual
                             pbPieza.Tag = null;
                             return;
                         }
-
-                        
-
                         seleccion++;
+                        pbPieza.Cursor = Cursors.Hand;
                     }
                     else
                     {
@@ -132,14 +130,14 @@ namespace AjedrezVisual
         }
         private void CasillaDestino(object sender, EventArgs e)
         {
-            
+
             string tagValue = "";
             if (seleccion == 1)
             {
                 // Obtiene la posición de un control PictureBox
                 Point position = GetPictureBoxPosition(sender);
                 posicionFinal = position;
-                
+
                 if (posicionFinal == posicionInicial)
                 {
                     MessageBox.Show("No se puede mover la pieza al mismo lugar");
@@ -170,7 +168,8 @@ namespace AjedrezVisual
                     {
                         MessageBox.Show("No puedes mover la pieza a esta posición");
                         return;
-                    } else if (tagValue.Contains("Black") && !Turno)
+                    }
+                    else if (tagValue.Contains("Black") && !Turno)
                     {
                         MessageBox.Show("No puedes mover la pieza a esta posición");
                         return;
@@ -182,10 +181,9 @@ namespace AjedrezVisual
                     switch (pictureBox.Tag.ToString())
                     {
                         case "Black_Rook":
-                            MessageBox.Show("Test");
                             if (movimientos.MovimientoTorre(posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, tablero, alto, ancho))
                             {
-                                MoverPieza(sender,e);
+                                MoverPieza(sender, e);
                                 break;
                             }
                             else
@@ -194,7 +192,6 @@ namespace AjedrezVisual
                                 return;
                             }
                         case "White_Rook":
-                            MessageBox.Show("Test");
                             if (movimientos.MovimientoTorre(posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, tablero, alto, ancho))
                             {
                                 MoverPieza(sender, e);
@@ -206,12 +203,51 @@ namespace AjedrezVisual
                                 return;
                             }
                         case "Black_Knight":
-                            break;
+                            if (movimientos.MovimientoCaballo(tablero, posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, alto, ancho))
+                            {
+                                MoverPieza(sender, e);
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se puede mover el caballo a esta posición");
+                                return;
+                            }
                         case "White_Knight":
+                            if (movimientos.MovimientoCaballo(tablero,posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, alto, ancho))
+                            {
+                                MoverPieza(sender, e);
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se puede mover el caballo a esta posición");
+                                return;
+                            }
                             break;
                         case "Black_Bishop":
+                            if (movimientos.MovimientoAlfil(tablero, posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, alto, ancho))
+                            {
+                                MoverPieza(sender, e);
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se puede mover el alfil a esta posición");
+                                return;
+                            }
                             break;
                         case "White_Bishop":
+                            if (movimientos.MovimientoAlfil(tablero, posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, alto, ancho))
+                            {
+                                MoverPieza(sender, e);
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se puede mover el alfil a esta posición");
+                                return;
+                            }
                             break;
                         case "Black_Queen":
                             break;
@@ -222,43 +258,40 @@ namespace AjedrezVisual
                         case "White_King":
                             break;
                         case "Black_Pawn":
-                            sender.GetType().GetProperty("Image").SetValue(sender, pbPieza.Image);
-                            sender.GetType().GetProperty("Tag").SetValue(sender, pbPieza.Tag);
 
-
-                            pictureBox.Image = null;
-                            pictureBox.Tag = "";
-                            pbPieza.Image = null;
-                            pbPieza.Tag = "";
-                            turno = !turno;
-                            Jugador();
-                            ActualizarTablero();
-                            break;
+                            if (movimientos.MovimientoPeon(tablero, posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, alto, ancho))
+                            {
+                                MoverPieza(sender, e);
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se puede mover el peón a esta posición");
+                                return;
+                            }
                         case "White_Pawn":
-                            sender.GetType().GetProperty("Image").SetValue(sender, pbPieza.Image);
-                            sender.GetType().GetProperty("Tag").SetValue(sender, pbPieza.Tag);
 
-
-                            pictureBox.Image = null;
-                            pictureBox.Tag = "";
-                            pbPieza.Image = null;
-                            pbPieza.Tag = "";
-                            turno = !turno;
-                            Jugador();
-                            ActualizarTablero();
-                            break;
+                            if (movimientos.MovimientoPeon(tablero, posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, alto, ancho))
+                            {
+                                MoverPieza(sender, e);
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se puede mover el peón a esta posición");
+                                return;
+                            }
                         default:
                             MessageBox.Show("Pieza inválida");
-                        break;
+                            break;
                     }
-
                 }
                 else
                 {
                     MessageBox.Show("No se puede mover la pieza a esta posición");
                 }
 
-                seleccion = 0;                
+                seleccion = 0;
             }
             else
             {
@@ -293,6 +326,14 @@ namespace AjedrezVisual
                 Jugador();
                 ActualizarTablero();
             }
+        }
+
+        private void SelectNewPz(object sender, EventArgs e)
+        {
+            pbPieza.Cursor = Cursors.Default;
+            pbPieza.Image = null;
+            pbPieza.Tag = "";
+            seleccion = 0;
         }
     }
 }
