@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pepe = new Button();
-            button4 = new Button();
+            Info = new Button();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
             pictureBox64 = new PictureBox();
@@ -98,6 +98,11 @@
             pictureBox2 = new PictureBox();
             pbPieza = new PictureBox();
             lblTurno = new Label();
+            btnCreditos = new Button();
+            lblReload = new Label();
+            lblPieza = new Label();
+            lblCreditos = new Label();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox64).BeginInit();
@@ -168,25 +173,33 @@
             // 
             // pepe
             // 
-            pepe.Location = new Point(761, 52);
+            pepe.BackgroundImage = Properties.Resources.reiniciar;
+            pepe.BackgroundImageLayout = ImageLayout.Stretch;
+            pepe.Cursor = Cursors.Hand;
+            pepe.FlatAppearance.BorderSize = 0;
+            pepe.FlatStyle = FlatStyle.Flat;
+            pepe.Location = new Point(857, 11);
             pepe.Margin = new Padding(3, 2, 3, 2);
             pepe.Name = "pepe";
-            pepe.Size = new Size(82, 22);
+            pepe.Size = new Size(41, 41);
             pepe.TabIndex = 0;
-            pepe.Text = "button1";
             pepe.UseVisualStyleBackColor = true;
             pepe.Click += button1_Click;
             // 
-            // button4
+            // Info
             // 
-            button4.Location = new Point(772, 221);
-            button4.Margin = new Padding(3, 2, 3, 2);
-            button4.Name = "button4";
-            button4.Size = new Size(82, 22);
-            button4.TabIndex = 3;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            Info.BackgroundImage = Properties.Resources.informacion;
+            Info.BackgroundImageLayout = ImageLayout.Stretch;
+            Info.Cursor = Cursors.Help;
+            Info.FlatAppearance.BorderSize = 0;
+            Info.FlatStyle = FlatStyle.Flat;
+            Info.Location = new Point(717, 11);
+            Info.Margin = new Padding(3, 2, 3, 2);
+            Info.Name = "Info";
+            Info.Size = new Size(41, 41);
+            Info.TabIndex = 3;
+            Info.UseVisualStyleBackColor = true;
+            Info.Click += Info_Click;
             // 
             // pictureBox1
             // 
@@ -1161,10 +1174,10 @@
             // pbPieza
             // 
             pbPieza.BackColor = Color.Transparent;
-            pbPieza.Location = new Point(769, 109);
+            pbPieza.Location = new Point(761, 157);
             pbPieza.Margin = new Padding(3, 2, 3, 2);
             pbPieza.Name = "pbPieza";
-            pbPieza.Size = new Size(74, 63);
+            pbPieza.Size = new Size(80, 80);
             pbPieza.SizeMode = PictureBoxSizeMode.StretchImage;
             pbPieza.TabIndex = 128;
             pbPieza.TabStop = false;
@@ -1174,26 +1187,92 @@
             // lblTurno
             // 
             lblTurno.AutoSize = true;
-            lblTurno.Location = new Point(751, 19);
+            lblTurno.Font = new Font("Arial", 14.25F, FontStyle.Bold | FontStyle.Italic);
+            lblTurno.Location = new Point(719, 115);
             lblTurno.Name = "lblTurno";
-            lblTurno.Size = new Size(0, 15);
+            lblTurno.Size = new Size(39, 23);
             lblTurno.TabIndex = 129;
+            lblTurno.Text = "dfs";
+            // 
+            // btnCreditos
+            // 
+            btnCreditos.BackgroundImage = Properties.Resources.grupo;
+            btnCreditos.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCreditos.Cursor = Cursors.Help;
+            btnCreditos.FlatAppearance.BorderSize = 0;
+            btnCreditos.FlatStyle = FlatStyle.Flat;
+            btnCreditos.Location = new Point(857, 547);
+            btnCreditos.Margin = new Padding(3, 2, 3, 2);
+            btnCreditos.Name = "btnCreditos";
+            btnCreditos.Size = new Size(41, 41);
+            btnCreditos.TabIndex = 130;
+            btnCreditos.UseVisualStyleBackColor = true;
+            btnCreditos.Click += Creditos;
+            // 
+            // lblReload
+            // 
+            lblReload.AutoSize = true;
+            lblReload.Font = new Font("Arial", 7F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblReload.Location = new Point(836, 53);
+            lblReload.Name = "lblReload";
+            lblReload.Size = new Size(79, 11);
+            lblReload.TabIndex = 131;
+            lblReload.Text = "Reiniciar juego";
+            // 
+            // lblPieza
+            // 
+            lblPieza.AutoSize = true;
+            lblPieza.Font = new Font("Arial", 14.25F, FontStyle.Bold | FontStyle.Italic);
+            lblPieza.Location = new Point(707, 255);
+            lblPieza.Name = "lblPieza";
+            lblPieza.Size = new Size(191, 23);
+            lblPieza.TabIndex = 132;
+            lblPieza.Text = "Pieza seleccionada";
+            // 
+            // lblCreditos
+            // 
+            lblCreditos.AutoSize = true;
+            lblCreditos.Font = new Font("Arial", 8F, FontStyle.Bold | FontStyle.Italic);
+            lblCreditos.Location = new Point(852, 594);
+            lblCreditos.Name = "lblCreditos";
+            lblCreditos.Size = new Size(53, 13);
+            lblCreditos.TabIndex = 133;
+            lblCreditos.Text = "Créditos";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 7F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Location = new Point(709, 54);
+            label1.Name = "label1";
+            label1.Size = new Size(61, 11);
+            label1.TabIndex = 134;
+            label1.Text = "Como jugar";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 224, 192);
             ClientSize = new Size(920, 619);
+            Controls.Add(label1);
+            Controls.Add(lblCreditos);
+            Controls.Add(lblPieza);
+            Controls.Add(lblReload);
+            Controls.Add(btnCreditos);
             Controls.Add(lblTurno);
             Controls.Add(pbPieza);
             Controls.Add(panel1);
-            Controls.Add(button4);
+            Controls.Add(Info);
             Controls.Add(pepe);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Ajedrez";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox64).EndInit();
@@ -1267,7 +1346,7 @@
         #endregion
 
         private Button pepe;
-        private Button button4;
+        private Button Info;
         private PictureBox pictureBox1;
         private Panel panel1;
         private PictureBox pictureBox8;
@@ -1335,5 +1414,10 @@
         private PictureBox pictureBox29;
         private PictureBox pbPieza;
         private Label lblTurno;
+        private Button btnCreditos;
+        private Label lblReload;
+        private Label lblPieza;
+        private Label lblCreditos;
+        private Label label1;
     }
 }

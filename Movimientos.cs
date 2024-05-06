@@ -240,7 +240,6 @@ namespace AjedrezVisual
             yIndex = y / alto;
             int x2Index = x2 / ancho;
             y2Index = y2 / alto;
-            bool continuar = false;
             cambio(yIndex, y2Index);
 
             int diffX = Math.Abs(xIndex - x2Index);
@@ -265,11 +264,34 @@ namespace AjedrezVisual
                     return true;
                 }
             }
-
-
-
-
             return true;
         }   
+
+        public bool MovimientoReina(string[,] tablero, int x, int y, int x2, int y2, int alto, int ancho)
+        {
+            yIndex = y / alto;
+            y2Index = y2 / alto;
+            cambio(yIndex, y2Index);
+
+            if (MovimientoTorre(x, y, x2, y2, tablero, alto, ancho) || MovimientoAlfil(tablero, x, y, x2, y2, alto, ancho))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool MovimientoRey(int x, int y, int x2, int y2, int alto, int ancho)
+        {
+            int xIndex = x / ancho;
+            yIndex = y / alto;
+            int x2Index = x2 / ancho;
+            y2Index = y2 / alto;
+            cambio(yIndex, y2Index);
+
+            int diffX = Math.Abs(xIndex - x2Index);
+            int diffY = Math.Abs(yIndex - y2Index);
+
+            return diffX <= 1 && diffY <= 1;
+        }
     }
 }

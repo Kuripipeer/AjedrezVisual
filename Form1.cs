@@ -74,12 +74,6 @@ namespace AjedrezVisual
             Application.Restart();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            pictureBox1.Image = Resource1.Black_Rook;
-            pictureBox1.Tag = "Black_Rook";
-        }
-
         private void SeleccionaPieza(object sender, EventArgs e)
         {
             if (seleccion == 0)
@@ -214,7 +208,7 @@ namespace AjedrezVisual
                                 return;
                             }
                         case "White_Knight":
-                            if (movimientos.MovimientoCaballo(tablero,posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, alto, ancho))
+                            if (movimientos.MovimientoCaballo(tablero, posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, alto, ancho))
                             {
                                 MoverPieza(sender, e);
                                 break;
@@ -250,13 +244,49 @@ namespace AjedrezVisual
                             }
                             break;
                         case "Black_Queen":
-                            break;
+                            if (movimientos.MovimientoReina(tablero, posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, alto, ancho))
+                            {
+                                MoverPieza(sender, e);
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se puede mover la reina a esta posición");
+                                return;
+                            }
                         case "White_Queen":
-                            break;
+                            if (movimientos.MovimientoReina(tablero, posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, alto, ancho))
+                            {
+                                MoverPieza(sender, e);
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se puede mover la reina a esta posición");
+                                return;
+                            }
                         case "Black_King":
-                            break;
+                            if (movimientos.MovimientoRey(posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, alto, ancho))
+                            {
+                                MoverPieza(sender, e);
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se puede mover el rey a esta posición");
+                                return;
+                            }
                         case "White_King":
-                            break;
+                            if (movimientos.MovimientoRey(posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, alto, ancho))
+                            {
+                                MoverPieza(sender, e);
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se puede mover el rey a esta posición");
+                                return;
+                            }
                         case "Black_Pawn":
 
                             if (movimientos.MovimientoPeon(tablero, posicionInicial.X, posicionInicial.Y, posicionFinal.X, posicionFinal.Y, alto, ancho))
@@ -334,6 +364,16 @@ namespace AjedrezVisual
             pbPieza.Image = null;
             pbPieza.Tag = "";
             seleccion = 0;
+        }
+
+        private void Info_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("1. Elegir la pieza a mover dando un clic sobre ella y que corresponda al color del turno.\r\n\n2. Para mover la pieza dar doble clic a la dirección de destino.\r\n\n3. Si se desea cambiar a la pieza a mover presionar la imagen que se muestra a la derecha para poder seleccionar la nueva pieza.", "Como jugar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Creditos(object sender, EventArgs e)
+        {
+            MessageBox.Show("1. Aguilera Hernández Andres\n\n\n2. Becerra Rojas Angel Alejandro\n\n\n3. Moreno Flores Christian Axel", "Créditos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }
